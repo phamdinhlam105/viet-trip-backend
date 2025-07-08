@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\viet-trip-backend.props" />
+</Project>
