@@ -5,7 +5,7 @@
         Task Add(TRequest request);
     }
 
-    public interface IUpdate<TResponse, TRequest>
+    public interface IUpdate<TRequest, TResponse>
     {
         Task<TResponse> Update(TRequest request);
     }
@@ -14,7 +14,10 @@
     {
         Task Delete(TRequest request);
     }
-
+    public interface IDeleteById
+    {
+        Task DeleteById(Guid id);
+    }
     public interface IGetById<TResponse>
     {
         Task<TResponse> GetById(Guid id);
@@ -28,7 +31,7 @@
     {
         Task<IEnumerable<TResponse>> GetAll();
     }
-    public interface IService<T, TRequest, TResponse> : IAdd<TRequest>, IUpdate<TResponse, TRequest>, IDelete<TRequest>, IGetById<TResponse>, IGetAll<TResponse>
+    public interface IService<T, TRequest, TResponse> : IAdd<TRequest>, IUpdate<TRequest, TResponse>, IDelete<T>, IGetById<TResponse>, IGetAll<TResponse>
     {
 
     }

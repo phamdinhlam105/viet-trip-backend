@@ -1,5 +1,5 @@
 ﻿using viet_trip_backend.Dtos.Booking;
-using viet_trip_backend.Interfaces.Mapper;
+using viet_trip_backend.Interfaces.Mapper.Public;
 using viet_trip_backend.Interfaces.Services.PublicService;
 using viet_trip_backend.UnitOfWork;
 

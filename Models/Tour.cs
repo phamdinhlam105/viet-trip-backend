@@ -16,6 +16,8 @@ namespace viet_trip_backend.Models
         public string Schedule {  get; set; }
         public string ScheduleDetail {  get; set; }
         public decimal? Price { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public int View { get; set; }
         public TourDetail TourDetail { get; set; }
         public NoticeInformation NoticeInformation { get; set; }

@@ -1,4 +1,4 @@
-﻿using viet_trip_backend.Dtos.Post;
+﻿using viet_trip_backend.Dtos.Post.PostRes.Public;
 
 namespace viet_trip_backend.Interfaces.Services.PublicService
 {
