@@ -1,4 +1,5 @@
-﻿using viet_trip_backend.Interfaces;
+﻿using viet_trip_backend.Helpers;
+using viet_trip_backend.Interfaces;
 
 namespace viet_trip_backend.Models
 {
@@ -13,6 +14,7 @@ namespace viet_trip_backend.Models
         public string Thumbnail {  get; set; }
         public decimal Price { get; set; }
         public decimal? PromotionPrice {  get; set; }
+        public AvailableStatus Status { get; set; }
         public string Ultilities {  get; set; }
         public int Star { get; set; }
         public string Rule {  get; set; }

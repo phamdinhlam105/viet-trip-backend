@@ -1,4 +1,6 @@
-﻿namespace viet_trip_backend.Dtos.Tour.TourRes.Admin
+﻿using viet_trip_backend.Helpers;
+
+namespace viet_trip_backend.Dtos.Tour.TourRes.Admin
 {
     public class AdminTourDetailRes
     {
@@ -11,6 +13,7 @@
         public List<string> Images { get; set; }
         public string Schedule { get; set; }
         public string ScheduleDetail { get; set; }
+        public AvailableStatus Status { get; set; }
         public string Price { get; set; }
         public string Location { get; set; }
         public string Food { get; set; }

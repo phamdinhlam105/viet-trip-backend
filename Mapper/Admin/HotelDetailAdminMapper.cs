@@ -19,6 +19,7 @@ namespace viet_trip_backend.Mapper.Admin
                 Thumbnail = entity.Thumbnail,
                 Price = entity.Price,
                 Content = entity.Content,
+                Status = entity.Status,
                 PromotionPrice = entity.PromotionPrice,
                 Images = entity.Images ?? new List<string>(),
                 Star = entity.Star,

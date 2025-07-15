@@ -21,6 +21,7 @@ namespace viet_trip_backend.Mapper.Admin
                 ScheduleDetail = entity.ScheduleDetail,
                 CreatedAt = entity.CreatedAt,
                 UpdatedAt = entity.UpdatedAt,
+                Status = entity.Status,
                 Location = entity.TourDetail.Location,
                 Transportation = entity.TourDetail.Transportation,
                 SuitablePerson = entity.TourDetail.SuitablePerson,

@@ -20,7 +20,7 @@ namespace viet_trip_backend.Services.PublicService
 
         public async Task<IEnumerable<PostListResponse>> GetAll()
         {
-            return (await _unitOfWork.Post.GetAll()).Select(p=>_postMapper.MapToResponse(p)).ToList();
+            return (await _unitOfWork.Post.GetAllPublishedPost()).Select(p=>_postMapper.MapToResponse(p)).ToList();
         }
 
         public async Task<PostDetailResponse> GetById(Guid id)

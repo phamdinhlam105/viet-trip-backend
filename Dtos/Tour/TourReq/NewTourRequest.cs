@@ -1,4 +1,5 @@
-﻿using viet_trip_backend.Models;
+﻿using viet_trip_backend.Helpers;
+using viet_trip_backend.Models;
 
 namespace viet_trip_backend.Dtos.Tour.TourReq
 {
@@ -14,6 +15,7 @@ namespace viet_trip_backend.Dtos.Tour.TourReq
         public string Schedule { get; set; }
         public string ScheduleDetail { get; set; }
         public decimal? Price { get; set; }
+        public AvailableStatus Status { get; set; }
         //Tour Detail
         public string Location { get; set; }
         public string Food { get; set; }

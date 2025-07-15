@@ -1,4 +1,5 @@
-﻿using viet_trip_backend.Interfaces;
+﻿using viet_trip_backend.Helpers;
+using viet_trip_backend.Interfaces;
 
 namespace viet_trip_backend.Models
 {
@@ -18,6 +19,7 @@ namespace viet_trip_backend.Models
         public decimal? Price { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
+        public AvailableStatus Status { get; set; }
         public int View { get; set; }
         public TourDetail TourDetail { get; set; }
         public NoticeInformation NoticeInformation { get; set; }

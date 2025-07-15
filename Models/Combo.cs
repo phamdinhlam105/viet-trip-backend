@@ -1,11 +1,15 @@
-﻿namespace viet_trip_backend.Models
+﻿using viet_trip_backend.Interfaces;
+
+namespace viet_trip_backend.Models
 {
-    public class Combo
+    public class Combo:ISlug
     {
         public Guid Id { get; set; }
         public Guid TourId {  get; set; }
         public Guid HotelId { get; set; }
         public DateOnly ApplyDate {  get; set; }
+        public string Name { get; set; }
+        public string Slug { get; set; }
         public decimal Price {  get; set; }
         public int View {  get; set; }
         public Hotel Hotel { get; set; }

@@ -1,4 +1,5 @@
 ﻿using viet_trip_backend.Dtos.Hotel.HotelRes.Public;
+using viet_trip_backend.Helpers;
 
 namespace viet_trip_backend.Dtos.Hotel.HotelRes.Admin
 {
@@ -12,6 +13,7 @@ namespace viet_trip_backend.Dtos.Hotel.HotelRes.Admin
         public string Thumbnail { get; set; }
         public decimal Price { get; set; }
         public string Content { get; set; }
+        public AvailableStatus Status { get; set; }
         public decimal? PromotionPrice { get; set; }
         public List<string> Images { get; set; }
         public int Star { get; set; }

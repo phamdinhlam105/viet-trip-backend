@@ -17,6 +17,7 @@ namespace viet_trip_backend.Mapper.Admin
                 Description = request.Description,
                 StartingPlace = request.StartingPlace,
                 Price = request.Price,
+                Status = request.Status,
                 Images = request.Images ?? new List<string>(),
                 Schedule = request.Schedule,
                 ScheduleDetail = request.ScheduleDetail,

@@ -31,6 +31,7 @@ builder.Services.AddScoped<IPostAdminService, PostAdminService>();
 builder.Services.AddScoped<ITourAdminService, TourAdminService>();
 builder.Services.AddScoped<IHotelAdminService, HotelAdminService>();
 builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<IBookingAdminService, BookingAdminService>();
 // Configure the mappers
 //public mappers
 builder.Services.AddScoped<ITourMapper, TourMapper>();

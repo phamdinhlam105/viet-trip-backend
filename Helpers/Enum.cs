@@ -7,7 +7,7 @@
         Archived = 2
     }
 
-    public enum AvailabilityStatus
+    public enum AvailableStatus
     {
         Unavailable = 0,
         Available = 1

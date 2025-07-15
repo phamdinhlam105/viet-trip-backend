@@ -9,7 +9,7 @@ namespace viet_trip_backend.Mapper.Admin
     {
         public Hotel MapToEntity(HotelRequest request)
         {
-          return new Hotel
+            return new Hotel
             {
                 Name = request.Name,
                 Address = request.Address,
@@ -19,6 +19,7 @@ namespace viet_trip_backend.Mapper.Admin
                 Slug = request.Slug,
                 Thumbnail = request.Thumbnail,
                 Content = request.Content,
+                Status = request.Status,
                 PromotionPrice = request.PromotionPrice,
                 Rule = request.Rule,
                 RoomDetails = request.RoomDetails.Select(rd => new RoomDetail
@@ -28,7 +29,7 @@ namespace viet_trip_backend.Mapper.Admin
                     Price = rd.Price,
                     Capacity = rd.Capacity,
                 }).ToList(),
-          };
+            };
         }
 
         public AdminHotelListItemRes MapToResponse(Hotel entity)

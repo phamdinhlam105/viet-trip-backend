@@ -1,5 +1,6 @@
 ﻿using viet_trip_backend.Data;
 using viet_trip_backend.Interfaces.Repositories.BookingRepo;
+using viet_trip_backend.Interfaces.Repositories.ComboRepo;
 using viet_trip_backend.Interfaces.Repositories.HotelRepo;
 using viet_trip_backend.Interfaces.Repositories.ImageRepository;
 using viet_trip_backend.Interfaces.Repositories.PostRepo;
@@ -26,7 +27,7 @@ namespace viet_trip_backend.UnitOfWork
         public IImageRepository Image => _serviceProvider.GetRequiredService<IImageRepository>();
         public ICustomerRepository Customer => _serviceProvider.GetRequiredService<ICustomerRepository>();
         public IBookingRepository Booking => _serviceProvider.GetRequiredService<IBookingRepository>();
-
+        public IComboRepository Combo => _serviceProvider.GetRequiredService<IComboRepository>();
         public async ValueTask DisposeAsync()
         {
 

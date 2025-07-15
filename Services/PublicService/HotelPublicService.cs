@@ -19,7 +19,7 @@ namespace viet_trip_backend.Services.PublicService
 
         public async Task<IEnumerable<HotelListResponse>> GetAll()
         {
-            return (await _unitOfWork.Hotel.GetAll()).Select(h=>_hotelMapper.MapToResponse(h));
+            return (await _unitOfWork.Hotel.GetAllAvailableHotel()).Select(h=>_hotelMapper.MapToResponse(h));
         }
 
         public async Task<HotelDetailResponse> GetById(Guid id)

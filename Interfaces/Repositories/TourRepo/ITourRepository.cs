@@ -4,5 +4,6 @@ namespace viet_trip_backend.Interfaces.Repositories.TourRepo
 {
     public interface ITourRepository:IRepository<Tour>,ISlugRepository<Tour>
     {
+        Task<IEnumerable<Tour>> GetAllAvailableTour();
     }
 }

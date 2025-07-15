@@ -1,4 +1,5 @@
 ﻿using viet_trip_backend.Interfaces.Repositories.BookingRepo;
+using viet_trip_backend.Interfaces.Repositories.ComboRepo;
 using viet_trip_backend.Interfaces.Repositories.HotelRepo;
 using viet_trip_backend.Interfaces.Repositories.ImageRepository;
 using viet_trip_backend.Interfaces.Repositories.PostRepo;
@@ -16,6 +17,7 @@ namespace viet_trip_backend.UnitOfWork
         IImageRepository Image {  get; }
         ICustomerRepository Customer { get; }
         IBookingRepository Booking {  get; }
+        IComboRepository Combo { get; }
 
         Task Save();
     }
