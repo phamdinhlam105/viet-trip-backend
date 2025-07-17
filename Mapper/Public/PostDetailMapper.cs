@@ -17,7 +17,6 @@ namespace viet_trip_backend.Mapper.Public
                 Thumbnail = entity.Thumbnail,
                 UpdatedAt = entity.UpdatedAt,
                 Content = entity.Content,
-                Attachments = entity.Attachments,
                 Author = entity.Author,
                 Tags = entity.Tags,
             };

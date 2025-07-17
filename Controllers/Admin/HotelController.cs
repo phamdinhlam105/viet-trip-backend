@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using viet_trip_backend.Dtos.Hotel.HotelReq;
 using viet_trip_backend.Interfaces.Services.AdminService;
+using viet_trip_backend.Services.AdminService;
 
 namespace viet_trip_backend.Controllers.Admin
 {
@@ -33,12 +34,15 @@ namespace viet_trip_backend.Controllers.Admin
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] HotelRequest request)
         {
-            if (request == null)
+            try
             {
-                return BadRequest("Hotel data is required");
+                await _hotelAdminService.Add(request);
+                return Ok();
             }
-            await _hotelAdminService.Add(request);
-            return CreatedAtAction(nameof(GetById), new { id = request.Id }, request);
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
         [HttpPut]
         public async Task<IActionResult> Update([FromBody] HotelRequest request)
@@ -71,12 +75,15 @@ namespace viet_trip_backend.Controllers.Admin
         [HttpGet("room-details/{hotelId}")]
         public async Task<IActionResult> GetRoomDetailsByHotelId(Guid hotelId)
         {
-            var roomDetails = await _hotelAdminService.GetRoomDetailByHotelId(hotelId);
-            if (roomDetails == null || !roomDetails.Any())
+            try
             {
-                return NotFound($"No room details found for hotel with ID {hotelId}");
+                await _hotelAdminService.DeleteById(hotelId);
+                return NoContent();
             }
-            return Ok(roomDetails);
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

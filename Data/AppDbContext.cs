@@ -3,7 +3,7 @@ using viet_trip_backend.Models;
 
 namespace viet_trip_backend.Data
 {
-    public class AppDbContext: DbContext
+    public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> dbContextOptions)
           : base(dbContextOptions) { }
@@ -18,5 +18,20 @@ namespace viet_trip_backend.Data
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Combo> Combos { get; set; }
         public DbSet<Post> Posts { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Tour>()
+                .HasOne(t => t.TourDetail)
+                .WithOne() // no reverse navigation
+                .HasForeignKey<Tour>(t => t.TourDetailId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
+            modelBuilder.Entity<Hotel>()
+                .HasMany(h=>h.RoomDetails)
+                .WithOne(r=>r.Hotel)
+                .HasForeignKey(r => r.HotelId);
+        }
     }
 }

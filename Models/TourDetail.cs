@@ -3,7 +3,6 @@
     public class TourDetail
     {
         public Guid Id {  get; set; }
-        public Guid TourId { get; set; }
         public string Location { get; set; }
         public string Food { get; set; }
         public string SuitablePerson {  get; set; }

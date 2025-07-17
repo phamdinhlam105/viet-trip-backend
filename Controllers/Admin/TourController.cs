@@ -50,7 +50,7 @@ namespace viet_trip_backend.Controllers.Admin
             try
             {
                 await _tourAdminService.Add(request);
-                return CreatedAtAction(nameof(GetById), new { id = request.Id }, request);
+                return Ok();
             }
             catch (Exception ex)
             {

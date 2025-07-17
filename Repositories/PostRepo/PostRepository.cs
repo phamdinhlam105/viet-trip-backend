@@ -7,13 +7,14 @@ using viet_trip_backend.Models;
 
 namespace viet_trip_backend.Repositories.PostRepo
 {
-    public class PostRepository:BaseSlugRepository<Post>, IPostRepository
+    public class PostRepository : BaseSlugRepository<Post>, IPostRepository
     {
         public PostRepository(AppDbContext _context) : base(_context) { }
         public async Task<IEnumerable<Post>> GetAllPublishedPost()
         {
             return await _context.Posts
-                .Where(p => p.Status==PostStatus.Published)
+                .Where(p => p.Status == PostStatus.Published)
                 .ToListAsync();
         }
+    }
 }

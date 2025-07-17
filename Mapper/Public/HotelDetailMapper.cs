@@ -1,5 +1,5 @@
 ﻿using viet_trip_backend.Dtos.Hotel;
-using viet_trip_backend.Dtos.Hotel.Public;
+using viet_trip_backend.Dtos.Hotel.HotelRes.Public;
 using viet_trip_backend.Interfaces.Mapper.Public;
 using viet_trip_backend.Models;
 

@@ -35,7 +35,7 @@ namespace viet_trip_backend.Controllers.Admin
                 return BadRequest("Invalid post data.");
             }
             await _postAdminService.Add(request);
-            return CreatedAtAction(nameof(GetById), new { id = request.Id }, request);
+            return Ok();
         }
         [HttpPut]
         public async Task<IActionResult> Update([FromBody] PostRequest request)

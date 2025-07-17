@@ -23,10 +23,7 @@ namespace viet_trip_backend.Mapper.Public
                 SuitablePerson = entity.TourDetail.SuitablePerson,
                 IdealTime = entity.TourDetail.IdealTime,
                 Transportation = entity.TourDetail.Transportation,
-                Promotion = entity.TourDetail.Promotion,
-                PriceIncluded = entity.NoticeInformation.PriceIncluded,
-                PriceNotIncluded = entity.NoticeInformation.PriceNotIncluded,
-                ChildrenNotice = entity.NoticeInformation.ChildrenNotice
+                Promotion = entity.TourDetail.Promotion
             };
         }
     }

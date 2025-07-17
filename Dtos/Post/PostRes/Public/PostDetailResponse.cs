@@ -10,7 +10,6 @@
         public string Thumbnail { get; set; }
         public DateTime UpdatedAt { get; set; }
         public string? Author { get; set; }
-        public List<string> Attachments { get; set; }
         public List<string>? Tags { get; set; }
     }
 }

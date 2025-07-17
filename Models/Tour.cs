@@ -7,7 +7,6 @@ namespace viet_trip_backend.Models
     {
         public Guid Id {  get; set; }
         public Guid TourDetailId {  get; set; }
-        public Guid NoticeInformationId {  get; set; }
         public string Name { get; set; }
         public string Slug { get; set; }
         public string Thumbnail {  get; set; }
@@ -22,7 +21,6 @@ namespace viet_trip_backend.Models
         public AvailableStatus Status { get; set; }
         public int View { get; set; }
         public TourDetail TourDetail { get; set; }
-        public NoticeInformation NoticeInformation { get; set; }
         public Tour()
         {
             Images = new List<string>();
