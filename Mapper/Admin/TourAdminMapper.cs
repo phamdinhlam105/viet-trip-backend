@@ -18,7 +18,7 @@ namespace viet_trip_backend.Mapper.Admin
                 StartingPlace = request.StartingPlace,
                 Price = request.Price,
                 Status = request.Status,
-                Images = request.Images ?? new List<string>(),
+                Images = request.Images ?? new List<Guid>(),
                 Schedule = request.Schedule,
                 ScheduleDetail = request.ScheduleDetail,
                 TourDetail = new TourDetail
@@ -42,6 +42,7 @@ namespace viet_trip_backend.Mapper.Admin
                 Name = entity.Name,
                 Slug = entity.Slug,
                 Description = entity.Description,
+                Status = entity.Status,
                 Price = entity.Price.HasValue ? entity.Price.ToString() : "Liên hệ",
                 View = entity.View,
                 CreatedAt = entity.CreatedAt,
@@ -57,7 +58,8 @@ namespace viet_trip_backend.Mapper.Admin
             entity.Description = request.Description;
             entity.StartingPlace = request.StartingPlace;
             entity.Price = request.Price;
-            entity.Images = request.Images ?? new List<string>();
+            entity.Images = request.Images ?? new List<Guid>();
+            entity.Status = request.Status;
             entity.Schedule = request.Schedule;
             entity.ScheduleDetail = request.ScheduleDetail;
             entity.TourDetail.Location = request.Location;

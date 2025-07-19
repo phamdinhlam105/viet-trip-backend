@@ -19,6 +19,7 @@ namespace viet_trip_backend.Mapper.Public
                 Star = entity.Star,
                 Price = entity.Price,
                 PromotionPrice = entity.PromotionPrice,
+                Ultilities = entity.Ultilities,
                 Images = entity.Images,
                 Rule = entity.Rule,
                 Content = entity.Content,

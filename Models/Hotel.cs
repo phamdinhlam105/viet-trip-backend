@@ -19,12 +19,13 @@ namespace viet_trip_backend.Models
         public int Star { get; set; }
         public string Rule {  get; set; }
         public int View {  get; set; }
-        public List<string> Images { get; set; }
+        public List<Guid> Images { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public ICollection<RoomDetail> RoomDetails { get; set; }
         public Hotel()
         {
+            Images = new List<Guid>();
             RoomDetails = new List<RoomDetail>(); 
         }
     }

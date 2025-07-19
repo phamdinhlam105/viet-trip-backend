@@ -27,11 +27,16 @@ namespace viet_trip_backend.Data
                 .HasForeignKey<Tour>(t => t.TourDetailId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-
             modelBuilder.Entity<Hotel>()
                 .HasMany(h=>h.RoomDetails)
                 .WithOne(r=>r.Hotel)
                 .HasForeignKey(r => r.HotelId);
+            modelBuilder.Entity<Hotel>()
+                .HasIndex(h => h.Slug).IsUnique();
+            modelBuilder.Entity<Tour>()
+                .HasIndex(t => t.Slug).IsUnique();
+            modelBuilder.Entity<Post>()
+                .HasIndex(p=>p.Slug).IsUnique();
         }
     }
 }

@@ -25,6 +25,7 @@ namespace viet_trip_backend.Services.AdminService
             var newId = Guid.NewGuid();
             hotel.Id = newId;
             hotel.CreatedAt = DateTime.UtcNow;
+            hotel.Status=Helpers.AvailableStatus.Available;
             hotel.UpdatedAt = DateTime.UtcNow;
             foreach(var room in hotel.RoomDetails)
             {

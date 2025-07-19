@@ -18,10 +18,12 @@ namespace viet_trip_backend.Mapper.Admin
                 Description = request.Description,
                 Slug = request.Slug,
                 Thumbnail = request.Thumbnail,
+                Ultilities=request.Ultilities,
                 Content = request.Content,
                 Status = request.Status,
                 PromotionPrice = request.PromotionPrice,
                 Rule = request.Rule,
+                Images=request.Images,
                 RoomDetails = request.RoomDetails.Select(rd => new RoomDetail
                 {
                     Name = rd.Name,
@@ -57,9 +59,11 @@ namespace viet_trip_backend.Mapper.Admin
             entity.Description = request.Description;
             entity.Slug = request.Slug;
             entity.Thumbnail = request.Thumbnail;
+            entity.Ultilities= request.Ultilities;
             entity.Content = request.Content;
             entity.PromotionPrice = request.PromotionPrice;
             entity.Rule = request.Rule;
+            entity.Images= request.Images;
             entity.UpdatedAt = DateTime.UtcNow;
             if(request.ShouldUpdateRoom== true)
             {

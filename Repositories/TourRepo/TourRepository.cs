@@ -12,7 +12,12 @@ namespace viet_trip_backend.Repositories.TourRepo
         public async Task<IEnumerable<Tour>> GetAllAvailableTour()
         {
             return await _context.Tours
+                .Include(t=>t.TourDetail)
                 .Where(t=>t.Status == AvailableStatus.Available).ToListAsync();
+        }
+        public override async Task<Tour> GetById(Guid id)
+        {
+            return await _context.Tours.Include(t => t.TourDetail).FirstOrDefaultAsync(t => t.Id == id);
         }
     }
 }

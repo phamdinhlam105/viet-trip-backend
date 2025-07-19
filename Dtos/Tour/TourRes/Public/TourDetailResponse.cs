@@ -6,7 +6,7 @@
         public string Name { get; set; }
         public string Slug { get; set; }
         public string Description { get; set; }
-        public List<string> Images { get; set; }
+        public List<Guid> Images { get; set; }
         public string Schedule { get; set; }
         public string ScheduleDetail { get; set; }
         public string Price { get; set; }
@@ -21,7 +21,7 @@
         public string ChildrenNotice { get; set; }
         public TourDetailResponse()
         {
-            Images = new List<string>();
+            Images = new List<Guid>();
         }
     }
 }

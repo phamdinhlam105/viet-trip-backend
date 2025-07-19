@@ -12,7 +12,7 @@ namespace viet_trip_backend.Models
         public string Thumbnail {  get; set; }
         public string Description { get; set; }
         public string StartingPlace {  get; set; }
-        public List<string> Images { get; set; }
+        public List<Guid> Images { get; set; }
         public string Schedule {  get; set; }
         public string ScheduleDetail {  get; set; }
         public decimal? Price { get; set; }
@@ -23,7 +23,7 @@ namespace viet_trip_backend.Models
         public TourDetail TourDetail { get; set; }
         public Tour()
         {
-            Images = new List<string>();
+            Images = new List<Guid>();
         }
     }
 }

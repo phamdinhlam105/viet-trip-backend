@@ -18,7 +18,7 @@ namespace viet_trip_backend.Services.AdminService
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task Add(IFormFile file)
+        public async Task Add(IFormFile file, string name)
         {
             if (file == null || file.Length == 0)
                 throw new ArgumentException("File không hợp lệ");
@@ -40,7 +40,8 @@ namespace viet_trip_backend.Services.AdminService
 
             var image = new Image
             {
-                Name = $"Ảnh {id}",
+                Id = id,
+                Name = $"Ảnh {name}",
                 Url = $"{baseUrl}/{_uploadFolder}/{fileName}",
                 CreatedAt = DateTime.UtcNow
             };

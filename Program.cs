@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using viet_trip_backend.Data;
 using viet_trip_backend.Interfaces.Mapper.Admin;
 using viet_trip_backend.Interfaces.Mapper.Public;
@@ -104,6 +105,8 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowFrontend");
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

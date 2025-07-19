@@ -16,12 +16,12 @@ namespace viet_trip_backend.Controllers.Admin
             _imageService = imageService;
         }
 
-        [HttpPost("upload")]
-        public async Task<IActionResult> Upload([FromForm] IFormFile file)
+        [HttpPost]
+        public async Task<IActionResult> Upload([FromForm] IFormFile file, [FromForm] string name)
         {
             try
             {
-                await _imageService.Add(file);
+                await _imageService.Add(file, name);
                 return Ok();
             }
             catch (Exception ex)

@@ -25,6 +25,7 @@ namespace viet_trip_backend.Services.AdminService
             tour.Id = Guid.NewGuid();
             tour.CreatedAt = DateTime.UtcNow;
             tour.UpdatedAt = DateTime.UtcNow;
+            tour.Status =Helpers.AvailableStatus.Available;
             await _unitOfWork.Tour.Add(tour);
         }
 
